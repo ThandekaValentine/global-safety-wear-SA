@@ -220,16 +220,53 @@
 
         </div>
         <!-- Delivery info strip -->
-        <div style="margin-top:32px;background:var(--white);border:1px solid var(--grey-light);border-radius:var(--radius-lg);padding:20px 24px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;">
-          <span style="font-size:20px;">🚚</span>
-          <div>
-            <strong style="font-family:var(--font-head);font-size:15px;color:var(--blue-dark);">Delivery Information</strong>
-            <p style="font-size:13px;color:var(--grey-dark);margin-top:2px;">Free pickup · Gauteng delivery free · Outside Gauteng R100 · Orders delivered in 5–7 working days</p>
-          </div>
-          <a href="payment.html" class="btn btn-primary" style="margin-left:auto;padding:10px 22px;font-size:14px;">Proceed to Checkout →</a>
-        </div>
-      </div>
+      <div class="delivery-section">
+  <label>Delivery Method</label>
 
+  <div class="delivery-option">
+    <input type="radio" name="delivery" data-key="collection" data-label="Free Collection" data-fee="0" checked />
+    
+    <div class="delivery-option-text">
+      <strong>Free Collection</strong>
+      <small>Collect directly from our Bronkhorstspruit facility.</small>
+    </div>
+
+    <span class="delivery-fee">Free</span>
+  </div>
+
+  <div class="delivery-option">
+    <input type="radio" name="delivery" data-key="bronk" data-label="Free Bronkhorstspruit Delivery" data-fee="0" />
+    
+    <div class="delivery-option-text">
+      <strong>Free Bronkhorstspruit Delivery</strong>
+      <small>Free local delivery within Bronkhorstspruit.</small>
+    </div>
+
+    <span class="delivery-fee">Free</span>
+  </div>
+
+  <div class="delivery-option">
+    <input type="radio" name="delivery" data-key="pretoria" data-label="Pretoria Delivery" data-fee="35" />
+    
+    <div class="delivery-option-text">
+      <strong>Pretoria Delivery — R35</strong>
+      <small>Delivery within Pretoria and surrounding areas.</small>
+    </div>
+
+    <span class="delivery-fee">R35</span>
+  </div>
+
+  <div class="delivery-option">
+    <input type="radio" name="delivery" data-key="nationwide" data-label="Nationwide Delivery" data-fee="100" />
+    
+    <div class="delivery-option-text">
+      <strong>Nationwide Delivery — R100</strong>
+      <small>Delivery across South Africa (5–7 working days).</small>
+    </div>
+
+    <span class="delivery-fee">R100</span>
+  </div>
+</div>
       <!-- ===== CART SIDEBAR ===== -->
       <div class="cart-sidebar">
         <div class="cart-header">

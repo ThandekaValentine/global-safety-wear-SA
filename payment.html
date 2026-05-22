@@ -133,47 +133,112 @@
             </div>
           </div>
 
-          <!-- STEP 2 ------------------------------------------------>
-          <div class="payment-form-block" style="margin-bottom:24px;">
-            <div class="form-section-head">
-              <span class="step-num">2</span>
-              Delivery Method
-            </div>
-            <div class="form-body">
-              <p style="font-size:14px;color:var(--grey-dark);margin-bottom:16px;">
-                All orders are delivered within <strong>5–7 working days</strong> from payment confirmation.
-              </p>
-              <div style="display:flex;flex-direction:column;gap:10px;">
-                <label style="display:flex;align-items:center;gap:12px;padding:14px 16px;border:2px solid var(--grey-light);border-radius:var(--radius);cursor:pointer;">
-                  <input type="radio" name="checkout_delivery" value="pickup" style="accent-color:var(--blue-mid);width:16px;height:16px;flex-shrink:0;" checked />
-                  <span style="font-size:20px;flex-shrink:0;">🏢</span>
-                  <span style="flex:1;min-width:0;">
-                    <strong style="font-family:var(--font-head);font-size:15px;color:var(--blue-dark);display:block;">Free Pickup</strong>
-                    <small style="color:var(--grey-dark);">2052 Ekangala Street, Ekandustria, Bronkhorstspruit</small>
-                  </span>
-                  <span style="font-family:var(--font-head);font-weight:800;color:var(--green-dark);flex-shrink:0;">Free</span>
-                </label>
-                <label style="display:flex;align-items:center;gap:12px;padding:14px 16px;border:2px solid var(--grey-light);border-radius:var(--radius);cursor:pointer;">
-                  <input type="radio" name="checkout_delivery" value="gauteng" style="accent-color:var(--blue-mid);width:16px;height:16px;flex-shrink:0;" />
-                  <span style="font-size:20px;flex-shrink:0;">🚚</span>
-                  <span style="flex:1;min-width:0;">
-                    <strong style="font-family:var(--font-head);font-size:15px;color:var(--blue-dark);display:block;">Gauteng Delivery</strong>
-                    <small style="color:var(--grey-dark);">5–7 working days</small>
-                  </span>
-                  <span style="font-family:var(--font-head);font-weight:800;color:var(--green-dark);flex-shrink:0;">Free</span>
-                </label>
-                <label style="display:flex;align-items:center;gap:12px;padding:14px 16px;border:2px solid var(--grey-light);border-radius:var(--radius);cursor:pointer;">
-                  <input type="radio" name="checkout_delivery" value="national" style="accent-color:var(--blue-mid);width:16px;height:16px;flex-shrink:0;" />
-                  <span style="font-size:20px;flex-shrink:0;">📦</span>
-                  <span style="flex:1;min-width:0;">
-                    <strong style="font-family:var(--font-head);font-size:15px;color:var(--blue-dark);display:block;">Outside Gauteng</strong>
-                    <small style="color:var(--grey-dark);">5–7 working days · Flat rate</small>
-                  </span>
-                  <span style="font-family:var(--font-head);font-weight:800;color:var(--blue-dark);flex-shrink:0;">R100</span>
-                </label>
-              </div>
-            </div>
-          </div>
+         <!-- STEP 2 ------------------------------------------------>
+<div class="payment-form-block" style="margin-bottom:24px;">
+  <div class="form-section-head">
+    <span class="step-num">2</span>
+    Delivery Method
+  </div>
+
+  <div class="form-body">
+    <p style="font-size:14px;color:var(--grey-dark);margin-bottom:16px;">
+      All orders are delivered within <strong>2–7 working days</strong> from payment confirmation.
+    </p>
+
+    <div style="display:flex;flex-direction:column;gap:10px;">
+
+      <!-- Free Collection -->
+      <label style="display:flex;align-items:center;gap:12px;padding:14px 16px;border:2px solid var(--grey-light);border-radius:var(--radius);cursor:pointer;">
+        <input type="radio" name="checkout_delivery" value="collection"
+          style="accent-color:var(--blue-mid);width:16px;height:16px;flex-shrink:0;"
+          checked />
+
+        <span style="font-size:20px;">🏢</span>
+
+        <span style="flex:1;">
+          <strong style="font-family:var(--font-head);font-size:15px;color:var(--blue-dark);display:block;">
+            Free Collection
+          </strong>
+
+          <small style="color:var(--grey-dark);">
+            Collect directly from our Bronkhorstspruit facility.
+          </small>
+        </span>
+
+        <span style="font-family:var(--font-head);font-weight:800;color:var(--green-dark);">
+          Free
+        </span>
+      </label>
+
+      <!-- Bronkhorstspruit -->
+      <label style="display:flex;align-items:center;gap:12px;padding:14px 16px;border:2px solid var(--grey-light);border-radius:var(--radius);cursor:pointer;">
+        <input type="radio" name="checkout_delivery" value="bronk"
+          style="accent-color:var(--blue-mid);width:16px;height:16px;flex-shrink:0;" />
+
+        <span style="font-size:20px;">🚚</span>
+
+        <span style="flex:1;">
+          <strong style="font-family:var(--font-head);font-size:15px;color:var(--blue-dark);display:block;">
+            Free Bronkhorstspruit Delivery
+          </strong>
+
+          <small style="color:var(--grey-dark);">
+            Free local delivery within Bronkhorstspruit.
+          </small>
+        </span>
+
+        <span style="font-family:var(--font-head);font-weight:800;color:var(--green-dark);">
+          Free
+        </span>
+      </label>
+
+      <!-- Pretoria -->
+      <label style="display:flex;align-items:center;gap:12px;padding:14px 16px;border:2px solid var(--grey-light);border-radius:var(--radius);cursor:pointer;">
+        <input type="radio" name="checkout_delivery" value="pretoria"
+          style="accent-color:var(--blue-mid);width:16px;height:16px;flex-shrink:0;" />
+
+        <span style="font-size:20px;">📍</span>
+
+        <span style="flex:1;">
+          <strong style="font-family:var(--font-head);font-size:15px;color:var(--blue-dark);display:block;">
+            Pretoria Delivery — R35
+          </strong>
+
+          <small style="color:var(--grey-dark);">
+            Delivery within Pretoria.
+          </small>
+        </span>
+
+        <span style="font-family:var(--font-head);font-weight:800;color:var(--green-dark);">
+          R35
+        </span>
+      </label>
+
+      <!-- Nationwide -->
+      <label style="display:flex;align-items:center;gap:12px;padding:14px 16px;border:2px solid var(--grey-light);border-radius:var(--radius);cursor:pointer;">
+        <input type="radio" name="checkout_delivery" value="nationwide"
+          style="accent-color:var(--blue-mid);width:16px;height:16px;flex-shrink:0;" />
+
+        <span style="font-size:20px;">📦</span>
+
+        <span style="flex:1;">
+          <strong style="font-family:var(--font-head);font-size:15px;color:var(--blue-dark);display:block;">
+            Nationwide Delivery — R100
+          </strong>
+
+          <small style="color:var(--grey-dark);">
+            Delivery outside of Pretoria (2–7 working days).
+          </small>
+        </span>
+
+        <span style="font-family:var(--font-head);font-weight:800;color:var(--blue-dark);">
+          R100
+        </span>
+      </label>
+
+    </div>
+  </div>
+</div>
 
           <!-- STEP 3 ------------------------------------------------>
           <div class="payment-form-block" style="margin-bottom:24px;">

@@ -12,7 +12,7 @@ const CANCEL_URL  = 'payment.html';
 let cart = [];
 try { cart = JSON.parse(localStorage.getItem('gsw_cart') || '[]'); } catch(e) { cart = []; }
 
-let selectedDelivery = { label: 'Free Pickup', fee: 0, key: 'pickup' };
+let selectedDelivery = { label: 'Free Collection', fee: 0, key: 'collection' };
 try {
   const saved = localStorage.getItem('gsw_delivery');
   if (saved) selectedDelivery = JSON.parse(saved);
@@ -327,8 +327,19 @@ function initDeliveryOptions() {
 
 /* ---- Checkout page delivery sync ---- */
 function initCheckoutDeliverySync() {
-  var feeMap   = { pickup: 0, gauteng: 0, national: 100 };
-  var labelMap = { pickup: 'Free Pickup', gauteng: 'Gauteng Delivery', national: 'Outside Gauteng' };
+var feeMap = {
+  collection: 0,
+  bronk: 0,
+  pretoria: 35,
+  nationwide: 100
+};
+
+var labelMap = {
+  collection: 'Free Collection',
+  bronk: 'Free Bronkhorstspruit Delivery',
+  pretoria: 'Pretoria Delivery',
+  nationwide: 'Nationwide Delivery'
+};
   document.querySelectorAll('input[name="checkout_delivery"]').forEach(function(radio) {
     radio.addEventListener('change', function() {
       selectDelivery(radio.value, labelMap[radio.value] || radio.value, feeMap[radio.value] || 0);

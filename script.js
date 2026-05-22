@@ -348,12 +348,21 @@ function initCheckoutDeliverySync() {
       var key = selected.value;
 
       selectDelivery(
-        key,
-        labelMap[key] || key,
-        feeMap[key] || 0
-      );
-    }
+  key,
+  labelMap[key] || key,
+  feeMap[key] || 0
+);
+
+var codButtons = document.querySelectorAll('.btn-cod');
+
+codButtons.forEach(function(btn) {
+  if (key === 'nationwide') {
+    btn.style.display = 'none';
+  } else {
+    btn.style.display = 'flex';
   }
+});
+    
 
   document.querySelectorAll('input[name="checkout_delivery"]').forEach(function(radio) {
     radio.addEventListener('change', syncSelectedDelivery);

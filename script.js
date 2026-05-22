@@ -356,11 +356,11 @@ function initCheckoutDeliverySync() {
 var codButtons = document.querySelectorAll('.btn-cod');
 
 codButtons.forEach(function(btn) {
-  if (key === 'nationwide') {
-    btn.style.display = 'none';
-  } else {
-    btn.style.display = 'flex';
-  }
+  btn.style.setProperty(
+    'display',
+    key === 'nationwide' ? 'none' : 'flex',
+    'important'
+  );
 });
     
 

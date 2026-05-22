@@ -140,85 +140,52 @@
             </div>
           </div>
 
-          <!-- 4. Powder-Free -->
-          <div class="product-card">
-           <div class="product-img multiple-images">
-  <img src="images/Blue Gloves S.jpeg" alt="Powder-Free Nitrile Gloves">
-  <img src="images/Blue Gloves W.png" alt="Powder-Free Nitrile Gloves">
+       <!-- 4. Yellow Household Gloves -->
+<div class="product-card">
+  <div class="product-img">
+    <img src="images/Yellow Gloves.jpeg" alt="Yellow Latex Household Gloves">
+  </div>
+
+  <span class="product-badge">Household</span>
+
+  <div class="product-body">
+    <h3>Yellow Latex Household Gloves</h3>
+
+    <p>
+      Durable yellow latex household gloves designed for cleaning,
+      dishwashing, laundry, and general household use.
+      Comfortable grip with excellent flexibility.
+    </p>
+
+    <div class="product-price">
+      R15.00 <span>/ pair</span>
+    </div>
+
+    <div class="product-controls">
+      <select class="size-selector" id="p4-size">
+        <option value="S">Small (S)</option>
+        <option value="M" selected>Medium (M)</option>
+        <option value="L">Large (L)</option>
+      </select>
+
+      <input
+        type="number"
+        class="qty-selector"
+        id="p4-qty"
+        value="1"
+        min="1"
+        max="999"
+      />
+    </div>
+
+    <button
+      class="btn-add-cart"
+      onclick="addToCart('yellow','Yellow Latex Household Gloves',15,document.getElementById('p4-size').value,parseInt(document.getElementById('p4-qty').value)||1)"
+    >
+      Add to Cart
+    </button>
+  </div>
 </div>
-
-<span class="product-badge">Hypoallergenic</span>
-            <div class="product-body">
-              <h3>Powder-Free Nitrile</h3>
-              <p>Specifically formulated for sensitive skin environments. No cornstarch powder — ideal for food preparation, pharmacies and labs.</p>
-              <div class="product-price">R89.00 <span>/ box of 100</span></div>
-              <div class="product-controls">
-                <select class="size-selector" id="p4-size">
-                  <option value="S">Small (S)</option>
-                  <option value="M" selected>Medium (M)</option>
-                  <option value="L">Large (L)</option>
-                </select>
-                <input type="number" class="qty-selector" id="p4-qty" value="1" min="1" max="999" />
-              </div>
-              <button class="btn-add-cart" onclick="addToCart('powderfree','Powder-Free Nitrile',89,document.getElementById('p4-size').value,parseInt(document.getElementById('p4-qty').value)||1,'')">
-                🛒 Add to Cart
-              </button>
-            </div>
-          </div>
-
-          <!-- 5. Medical Grade -->
-          <div class="product-card">
-           <div class="product-img multiple-images">
-  <img src="images/Purple Gloves S.jpeg" alt="Medical Grade Gloves">
-  <img src="images/Purple Gloves W.jpeg" alt="Medical Grade Gloves">
-</div>
-
-<span class="product-badge">Medical</span>
-            <div class="product-body">
-              <h3>Medical Grade Gloves</h3>
-              <p>Certified medical-grade nitrile. Suitable for hospitals, operating theatres, and clinical procedures requiring the highest barrier protection.</p>
-              <div class="product-price">R89.00 <span>/ box of 100</span></div>
-              <div class="product-controls">
-                <select class="size-selector" id="p5-size">
-                  <option value="S">Small (S)</option>
-                  <option value="M" selected>Medium (M)</option>
-                  <option value="L">Large (L)</option>
-                </select>
-                <input type="number" class="qty-selector" id="p5-qty" value="1" min="1" max="999" />
-              </div>
-              <button class="btn-add-cart" onclick="addToCart('medical','Medical Grade Gloves',89,document.getElementById('p5-size').value,parseInt(document.getElementById('p5-qty').value)||1,'')">
-                🛒 Add to Cart
-              </button>
-            </div>
-          </div>
-
-          <!-- 6. Disposable Safety -->
-          <div class="product-card">
-           <div class="product-img multiple-images">
-  <img src="images/Black Gloves S.jpeg" alt="Disposable Safety Gloves">
-  <img src="images/Black Gloves W.jpeg" alt="Disposable Safety Gloves">
-</div>
-
-<span class="product-badge">Value Pack</span>
-            <div class="product-body">
-              <h3>Disposable Safety Gloves</h3>
-              <p>Economical general-purpose nitrile gloves for cleaning companies, light industrial tasks, and everyday protection. Reliable and comfortable.</p>
-              <div class="product-price">R89.00 <span>/ box of 100</span></div>
-              <div class="product-controls">
-                <select class="size-selector" id="p6-size">
-                  <option value="S">Small (S)</option>
-                  <option value="M" selected>Medium (M)</option>
-                  <option value="L">Large (L)</option>
-                </select>
-                <input type="number" class="qty-selector" id="p6-qty" value="1" min="1" max="999" />
-              </div>
-              <button class="btn-add-cart" onclick="addToCart('disposable','Disposable Safety Gloves',89,document.getElementById('p6-size').value,parseInt(document.getElementById('p6-qty').value)||1,'')">
-                🛒 Add to Cart
-              </button>
-            </div>
-          </div>
-
-        </div>
         <!-- Delivery info strip -->
       <div class="delivery-section">
   <label>Delivery Method</label>
@@ -250,7 +217,7 @@
     
     <div class="delivery-option-text">
       <strong>Pretoria Delivery — R35</strong>
-      <small>Delivery within Pretoria and surrounding areas.</small>
+      <small>Delivery within Pretoria.</small>
     </div>
 
     <span class="delivery-fee">R35</span>
@@ -261,7 +228,7 @@
     
     <div class="delivery-option-text">
       <strong>Nationwide Delivery — R100</strong>
-      <small>Delivery across South Africa (5–7 working days).</small>
+      <small>Delivery outside of Pretoria(2–7 working days).</small>
     </div>
 
     <span class="delivery-fee">R100</span>
@@ -369,12 +336,12 @@
       </div>
       <div class="footer-col">
         <h5>Delivery</h5>
-        <ul>
-          <li><a href="#">Free Pickup Available</a></li>
-          <li><a href="#">Gauteng – Free</a></li>
-          <li><a href="#">Outside Gauteng – R100</a></li>
-          <li><a href="#">5–7 Working Days</a></li>
-        </ul>
+      <ul>
+  <li><a href="#">Free Collection Available</a></li>
+  <li><a href="#">Free Bronkhorstspruit Delivery</a></li>
+  <li><a href="#">Pretoria Delivery – R35</a></li>
+  <li><a href="#">Outside Pretoria – R100</a></li>
+</ul>
       </div>
       <div class="footer-col">
         <h5>Contact Us</h5>

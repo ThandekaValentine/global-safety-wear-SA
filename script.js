@@ -327,33 +327,39 @@ function initDeliveryOptions() {
 
 /* ---- Checkout page delivery sync ---- */
 function initCheckoutDeliverySync() {
-var feeMap = {
-  collection: 0,
-  bronk: 0,
-  pretoria: 35,
-  nationwide: 100
-};
+  var feeMap = {
+    collection: 0,
+    bronk: 0,
+    pretoria: 35,
+    nationwide: 100
+  };
 
-var labelMap = {
-  collection: 'Free Collection',
-  bronk: 'Free Bronkhorstspruit Delivery',
-  pretoria: 'Pretoria Delivery',
-  nationwide: 'Nationwide Delivery'
-};
+  var labelMap = {
+    collection: 'Free Collection',
+    bronk: 'Free Bronkhorstspruit Delivery',
+    pretoria: 'Pretoria Delivery',
+    nationwide: 'Nationwide Delivery'
+  };
+
+  function syncSelectedDelivery() {
+    var selected = document.querySelector('input[name="checkout_delivery"]:checked');
+
+    if (selected) {
+      var key = selected.value;
+
+      selectDelivery(
+        key,
+        labelMap[key] || key,
+        feeMap[key] || 0
+      );
+    }
+  }
+
   document.querySelectorAll('input[name="checkout_delivery"]').forEach(function(radio) {
-    radio.addEventListener('change', function() {
-      selectDelivery(radio.value, labelMap[radio.value] || radio.value, feeMap[radio.value] || 0);
-    });
+    radio.addEventListener('change', syncSelectedDelivery);
   });
-}
 
-/* ---- COD success modal close ---- */
-function closeModal() {
-  var modal = document.getElementById('success-modal');
-  if (modal) modal.classList.remove('visible');
-  cart = [];
-  localStorage.removeItem('gsw_cart');
-  window.location.href = 'index.html';
+  syncSelectedDelivery();
 }
 
 /* ============================================================

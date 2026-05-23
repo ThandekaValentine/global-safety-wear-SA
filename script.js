@@ -362,7 +362,8 @@ codButtons.forEach(function(btn) {
     'important'
   );
 });
-    
+    }
+  }
 
   document.querySelectorAll('input[name="checkout_delivery"]').forEach(function(radio) {
     radio.addEventListener('change', syncSelectedDelivery);

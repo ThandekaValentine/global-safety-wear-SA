@@ -714,19 +714,29 @@ function initCheckoutDeliverySync() {
 
   function syncSelectedDelivery() {
     var selected = document.querySelector('input[name="checkout_delivery"]:checked');
-
     if (!selected) return;
 
     var key = selected.value;
     var fee = feeMap[key] || 0;
     var label = labelMap[key] || key;
 
-    selectDelivery(key, label, fee);
+    selectedDelivery = {
+      key: key,
+      label: label,
+      fee: fee
+    };
 
-    var codButtons = document.querySelectorAll('.btn-cod');
+    localStorage.setItem('gsw_delivery', JSON.stringify(selectedDelivery));
 
-    codButtons.forEach(function(btn) {
-      btn.style.display = key === 'nationwide' ? 'none' : '';
+    updateTotals();
+    renderPaymentSummary();
+
+    document.querySelectorAll('.btn-cod').forEach(function(btn) {
+      if (key === 'nationwide') {
+        btn.style.setProperty('display', 'none', 'important');
+      } else {
+        btn.style.setProperty('display', 'block', 'important');
+      }
     });
   }
 
@@ -734,9 +744,8 @@ function initCheckoutDeliverySync() {
     radio.addEventListener('change', syncSelectedDelivery);
   });
 
-
+  syncSelectedDelivery();
 }
-
 /* ============================================================
    INIT
    ============================================================ */

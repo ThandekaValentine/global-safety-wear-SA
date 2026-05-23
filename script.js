@@ -344,25 +344,19 @@ function initCheckoutDeliverySync() {
   function syncSelectedDelivery() {
     var selected = document.querySelector('input[name="checkout_delivery"]:checked');
 
-    if (selected) {
-      var key = selected.value;
+    if (!selected) return;
 
-      selectDelivery(
-  key,
-  labelMap[key] || key,
-  feeMap[key] || 0
-);
+    var key = selected.value;
+    var fee = feeMap[key] || 0;
+    var label = labelMap[key] || key;
 
-var codButtons = document.querySelectorAll('.btn-cod');
+    selectDelivery(key, label, fee);
 
-codButtons.forEach(function(btn) {
-  btn.style.setProperty(
-    'display',
-    key === 'nationwide' ? 'none' : 'flex',
-    'important'
-  );
-});
-    }
+    var codButtons = document.querySelectorAll('.btn-cod');
+
+    codButtons.forEach(function(btn) {
+      btn.style.display = key === 'nationwide' ? 'none' : '';
+    });
   }
 
   document.querySelectorAll('input[name="checkout_delivery"]').forEach(function(radio) {

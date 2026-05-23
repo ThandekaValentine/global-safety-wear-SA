@@ -734,7 +734,7 @@ function initCheckoutDeliverySync() {
     radio.addEventListener('change', syncSelectedDelivery);
   });
 
-  syncSelectedDelivery();
+
 }
 
 /* ============================================================
@@ -745,8 +745,9 @@ document.addEventListener('DOMContentLoaded', function() {
   updateNavCartCount();
   updateCartUI();
   initDeliveryOptions();
-  initCheckoutDeliverySync();
   updateTotals();
   initPaymentMethodToggle();
   renderPaymentSummary();
+
+  initCheckoutDeliverySync();
 });

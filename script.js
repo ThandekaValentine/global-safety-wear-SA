@@ -721,16 +721,15 @@ function initCheckoutDeliverySync() {
     var label = labelMap[key] || key;
 
     selectedDelivery = {
-      key: key,
-      label: label,
-      fee: fee
-    };
+  key: key,
+  label: label,
+  fee: fee
+};
 
-    localStorage.setItem('gsw_delivery', JSON.stringify(selectedDelivery));
+localStorage.setItem('gsw_delivery', JSON.stringify(selectedDelivery));
 
-    updateTotals();
-    renderPaymentSummary();
-
+updateTotals();
+renderPaymentSummary();
     document.querySelectorAll('.btn-cod').forEach(function(btn) {
       if (key === 'nationwide') {
         btn.style.setProperty('display', 'none', 'important');

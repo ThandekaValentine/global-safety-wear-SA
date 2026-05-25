@@ -759,3 +759,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
   initCheckoutDeliverySync();
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  const hamburger = document.querySelector('.nav-hamburger');
+  const mobileNav = document.querySelector('.nav-mobile');
+
+  if (hamburger && mobileNav) {
+    hamburger.onclick = function () {
+      mobileNav.classList.toggle('open');
+      hamburger.classList.toggle('open');
+    };
+  }
+});

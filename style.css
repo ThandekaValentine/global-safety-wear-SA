@@ -1630,3 +1630,19 @@ button { cursor: pointer; font-family: var(--font-body); border: none; }
     display: flex !important;
   }
 }
+
+@media (max-width: 768px) {
+  .nav-mobile {
+    display: none !important;
+  }
+
+  .nav-mobile.open {
+    display: flex !important;
+    flex-direction: column !important;
+    position: absolute;
+    top: 72px;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+  }
+}

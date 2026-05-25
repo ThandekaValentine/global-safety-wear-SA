@@ -1615,3 +1615,18 @@ button { cursor: pointer; font-family: var(--font-body); border: none; }
   transition: opacity 0.2s;
 }
 #sidebar-payfast-form button:hover { opacity: 0.9; }
+
+@media (max-width: 768px) {
+  .nav-mobile {
+    display: none;
+  }
+
+  .nav-mobile.open {
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  .nav-hamburger {
+    display: flex !important;
+  }
+}
